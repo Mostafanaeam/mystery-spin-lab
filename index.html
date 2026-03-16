@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Journey - Wheel of Action</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-matrix">
+    <!-- Background Effects -->
+    <div id="background-effects" class="background-effects"></div>
+    <div id="cursor-glow" class="cursor-glow"></div>
+
+    <!-- UI Overlay: Top Bar -->
+    <div class="ui-bar">
+      <button id="btn-rules" class="ui-btn">📜 القواعد</button>
+      <button id="btn-theme" class="ui-btn">🎨 السمات</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="brand">CODE JOURNEY</div>
+      <p class="subtitle">طوّر نفسك . نظّم وقتك . تحدى ذاتك</p>
+    </header>
+
+    <!-- Main Game Area -->
+    <main>
+      <div class="wheel-outer-ring"></div>
+      <div class="wheel-container">
+        <div class="pointer"></div>
+        <div class="wheel" id="wheel">
+          <!-- Segments generated via JS or CSS -->
+          <div class="segment seg-say" style="--i: 0"><span>قول</span></div>
+          <div class="segment seg-do" style="--i: 1"><span>اعمل</span></div>
+          <div class="segment seg-explore" style="--i: 2">
+            <span>استكشف</span>
+          </div>
+          <div class="segment seg-try" style="--i: 3"><span>حاول</span></div>
+          <div class="segment seg-challenge" style="--i: 4">
+            <span>تحدى</span>
+          </div>
+        </div>
+        <button class="spin-btn" id="spinBtn">SPIN</button>
+      </div>
+    </main>
+
+    <!-- Generic Modal -->
+    <div id="modal" class="modal-overlay">
+      <div class="modal-content">
+        <!-- Dynamic Content Injected Here -->
+        <div id="modal-header">
+          <h2 id="modal-title">العنوان</h2>
+        </div>
+        <div id="modal-body" class="modal-body">
+          <span id="modal-tag" class="topic-tag">Tag</span>
+          <p id="modal-text">النص هنا...</p>
+
+          <!-- Timer Section (Hidden by default) -->
+          <div id="timer-container" class="timer-container hidden">
+            <div class="timer-bar"><div id="timer-fill"></div></div>
+            <span id="timer-text">20s</span>
+          </div>
+        </div>
+        <div id="modal-footer">
+          <button id="modal-action-btn" class="action-btn">استمرار</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
